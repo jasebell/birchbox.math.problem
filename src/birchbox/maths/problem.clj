@@ -22,9 +22,12 @@
                {:id 9 :name "Product9" :stockqty 1}
                {:id 10 :name "Product10" :stockqty 8}])
 
+(defn calc-happiness []
+  (rand 101))
+
 (defn sum-products [products customers]
   (->> products
-       (map (fn [product] [(:stockqty product) (count customers)] ))))
+       (map (fn [product] [(:stockqty product) (count customers)]))))
 
 
 
